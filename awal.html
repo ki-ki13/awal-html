@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .list{
+            color:aqua;
+            font-family: sans-serif
+            }
+            .go{
+                color:aliceblue;
+                font-family:sans-serif;
+            }
+            .at{
+               color:aliceblue;
+               font-family:sans-serif;
+               text-align: center;
+            }
+            table{
+                border-collapse: collapse;
+            }
+            td{
+                border:3px solid;
+                border-color: yellow;
+                color: aliceblue;
+                background-color: black;
+                }
+        p{
+            font-family:sans-serif;
+            color: aliceblue;
+            }
+            #lik:link, #lik:visited {
+                background-color: #f44336;
+                color: white;
+                padding: 15px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+
+            #lik:hover, #lik:active {
+                background-color: red;
+            }
+        </style>
+        
+        <title>S-Tech Web-Programming 1</title>
+    </head>
+    <body style="background-color:darkslategray">
+        <h1 style="text-align: center; color: aqua">Latihan Web Programming</h1>
+        <h2 style="text-align: center; color: aliceblue">S-Tech (PTI-Riptek)</h2>
+        <ul>
+            
+        <li class="list"><h3>Text Formatting</h3></li>
+            <ol>
+                <li class="go"><b>Bold Text</b><br>
+                Berfungsi untuk menebalkan text bisa menggunakan tag bold atau strong.
+                Format tagnya adalah b atau strong. (lihat source code-nya untuk lebih tau)</li><br>
+                <li class="go"><i>Italic Text</i><br>
+                Berfungsi untuk membuat text menjadi miring. Simbol dalam tagnya adalah huruf i.
+                    (lihat source code-nya untuk lebih tau)</li><br>
+                <li class="go"><sub>Sub Text</sub><br>
+                Berfungsi untuk membuat sub-text yang berukuran kecil dibawah text utama. 
+                Simbol dalam tagnya adalah sub.(lihat source code-nya untuk lebih tau)</li><br>
+                <li class="go"><small>Small Text</small><br>
+                Berfungsi untuk membuat text menjadi kecil tapi bukan sebuah sub dari text utama.
+                Simbol dalam tagnya adalah small.(lihat source code-nya untuk lebih tau)</li><br>
+            </ol><br>
+            
+        <li class="list"><h3>List</h3></li>
+            <p>Untuk membuat urutan pada web. Ada 2 macam list :</p>
+            <ol class="go">
+            <li>Ordered list (ol)</li>
+                Memuat angka urutan
+            <li>Unordered list (ul)</li>
+                Hanya bullet dan sebagainya (bantuan CSS)
+            </ol>
+            <p>Contoh :<br>
+            Ol</p>
+            <ol class="go">
+                <li>haha</li>
+                <li>hihi</li>
+                <li>huhu</li>
+            </ol>
+            <p>Ul</p>
+            <ul class="go">
+                <li>hehe</li>
+                <li>hoho</li>
+                <li>hhhh</li>
+            </ul>
+            <p>(lihat source code-nya untuk lebih tau)</p><br>
+            
+        <li class="list"><h3>Link(a href=)</h3></li>
+            <p>Untuk menampilkan link pada website, di html menggunakan artribut (href) pada tag a.
+            (lihat source code-nya untuk lebih tau)</p>
+            <a href="https://google.com" target="_blank">Ini link </a><br>
+            
+        <li class="list"><h3>Gambar</h3></li>
+            <p>Untuk menampilkan gambar menggunakan tag img dengan artribut src. Artribut src berarti source gambar.
+            Gambar sebaiknya satu folder dengan file html untuk mempermudah. Jika tidak satu folder maka harus diberi "/" sebelumnya dan beri nama foldernya.(lihat source code-nya untuk lebih tau) </p>
+            <img src="yo.png" width=200px>
+            <img src="mput.jpg" width=495px>
+            <img src="itor.png" width=200px><br>
+            
+        <li class="list"><h3>Tabel</h3></li>
+            <p>Untuk membuat tabel harus disertakan tag table, kemudian ada tag tr yang berarti row/baris untuk mengisi data di dalam satu baris. Ada tag td untuk mengisi kolom dalam satu baris. Ada banyak properti pada tag table bisa dilihat pada link yang ada dibawah. (lihat source code-nya untuk lebih tau)</p>
+            <p>Ada properti warna. Untuk warna backgroud pada tabel propertinya bgcolor, sedangkan warna border propertinya bordercolor. Warna menggunakan bahasa inggris dan bisa menggunakan hexa dari warna, lihat di colorpicker(google).</p>
+            <div>
+            <table border=1 width= 500px bordercolor="yellow">
+            <tr>
+                <td align="center" rowspan="2" bgcolor="lightblue">Nama</td>
+                <td align="center">Asal</td>
+                <td align="center">Jurusan</td>
+                <td align="center" colspan="2">Nama Hewan Peliharaan</td>
+            </tr>
+            <tr>
+                <td>b</td>
+                <td>c</td>
+                <td>d</td>
+                <td>e</td>
+            </tr>
+            </table>
+                <br>
+            </div>
+            
+            <li class="list"><h3>Form</h3></li>
+            <p> Form adalah tag yang digunakan untuk membuat form. Contohnya adalah form login seperti contoh dibawah ini. Tag form memiliki banyak elemen dan dapat ditambahi artribut.</p>
+             <div class="form">
+        <form action="proses.php" method="POST" enctype="multipart/form-data">
+            <fieldset style="width: 400px;border-width: 3px;background-color: black;border-color: yellow">
+            <p>
+                <label for="username">Username :</label>
+                <input type="text" name="username">
+            </p>
+            <p>
+                <label for="pass">Password :</label>
+                <input type="password" name="pass">
+            </p>
+            <p>
+                <input type="file">
+            </p>
+            <p>
+                <label for="kelamin">Jenis Kelamin :</label>
+                <select name="kelamin" id="">
+                    <option value="P">Perempuan</option>
+                    <option value="L">Laki-laki</option>
+                </select>
+            </p>
+                <input type="submit" name="button" value="Submit" id="">
+            </fieldset>
+        </form>
+    </div>
+        </ul>
+        <div class="at">
+            <p>You Better open </p> <a id="lik" href="https://w3schools.com" target="_blank">this link</a> <p>if you wanna learn more</p>
+        </div>
+        
+    </body>
+</html>
